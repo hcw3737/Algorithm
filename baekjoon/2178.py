@@ -1,4 +1,4 @@
-# BFS
+# BFS - 미로탐색
 
 from collections import deque
 
