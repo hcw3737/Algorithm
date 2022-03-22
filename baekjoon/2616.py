@@ -11,9 +11,6 @@ dp = [[0]*(n+1) for _ in range(4)]
 
 for i in range(1,4):
     for j in range(i*m, n+1):
-        if i == 1 :
-            dp[i][j] = sum(train[j-m+1:j+1])
-        else :
-            dp[i][j] = max(dp[i-1][j-m]+sum(train[j-m+1:j+1]),dp[i][j-1])
+        dp[i][j] = max(dp[i-1][j-m]+sum(train[j-m+1:j+1]),dp[i][j-1])
 
 print(dp[3][-1])
